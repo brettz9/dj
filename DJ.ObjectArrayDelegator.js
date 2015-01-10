@@ -35,6 +35,7 @@ ObjectArrayDelegator.prototype.objectHandler = function objectHandler (value, pa
             }
         }
     }
+    // Todo: Avoid assumption of string for joining
     return ret + keyVals.join(this.objectKeyValueJoinerHandler()) + this.endObjectHandler(value, parentObject, parentKey, parentObjectArrayBool);
 };
 
@@ -59,6 +60,7 @@ ObjectArrayDelegator.prototype.arrayHandler = function arrayHandler (value, pare
             }
         }
     }
+    // Todo: Avoid assumption of string for joining
     return ret + keyVals.join(this.arrayKeyValueJoinerHandler()) + this.endArrayHandler(value, parentObject, parentKey, parentObjectArrayBool, arrLength);
 };
 
@@ -73,6 +75,7 @@ ObjectArrayDelegator.prototype.keyValueHandler = function keyValueHandler (value
     if (arrayBool) {
         return this.arrayKeyValueHandler(value, key, parentObject, parentKey, parentObjectArrayBool);
     }
+    // Todo: Avoid assumption of string for joining
     return objectRet + this.objectKeyValueHandler(value, key, parentObject, parentKey, parentObjectArrayBool, iterCt);
 };
 
@@ -90,6 +93,7 @@ ObjectArrayDelegator.prototype.objectKeyValueHandler = function objectKeyValueHa
 */
 ObjectArrayDelegator.prototype.keyValueDistinguishedHandler = function keyValueHandler (value, key, parentObject, parentKey, parentObjectArrayBool, arrayBool, iterCt) {
     var ret = this.keyHandler(key, parentObject, parentKey, parentObjectArrayBool, arrayBool, iterCt);
+    // Todo: Avoid assumption of string for joining
     return ret + this.valueHandler(value, key, parentObject, parentKey, parentObjectArrayBool, arrayBool, iterCt);
 };
 ObjectArrayDelegator.prototype.keyHandler = function (key, parentObject, parentKey, parentObjectArrayBool, arrayBool, iterCt) {
