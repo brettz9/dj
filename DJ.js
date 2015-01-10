@@ -53,6 +53,7 @@ I may provide adapters later (todo)
             change keyValueHandlers to return commas, etc.)
         ii) avoid functions/undefined/prototype completely, and converting nonfinite to null
 3. Add JSONPaths (or implement JSONPath reporting in DJ as in jsonPath())? XPath to string SAX XML? .getXPath on DOM node prototype?
+4. Add valueHandler option for generically handling values (as in Clarinet)
 */
 
 var define, exports, module;
