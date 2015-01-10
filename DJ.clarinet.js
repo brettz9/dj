@@ -45,17 +45,6 @@ DJ.createAndExport({name: 'DJClarinet', inherits: ObjectArrayDelegator, methods:
     },
     stringHandler: function stringHandler (value, parentObject, parentKey, parentObjectArrayBool) {
         return this.onvalue(value);
-    },
-
-    // JavaScript-only (non-JSON) (terminal) handler methods (not used or required for JSON mode)
-    functionHandler: function functionHandler (value, parentObject, parentKey, parentObjectArrayBool) {
-        return value.toString(); // May not be supported everywhere
-    },
-    undefinedHandler: function undefinedHandler (parentObject, parentKey, parentObjectArrayBool) {
-        return 'undefined';
-    },
-    nonfiniteNumberHandler: function nonfiniteNumberHandler (value, parentObject, parentKey, parentObjectArrayBool) {
-        return String(value);
     }
 }});
 
