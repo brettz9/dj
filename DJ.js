@@ -160,6 +160,7 @@ DJ.prototype.walkJSONObject = function walkJSONObject (obj, parentObject, parent
     var parObj = parentObject || this.options.parentObject, 
         parKey = parentKey || this.options.parentKey,
         parObjArrBool = parentObjectArrayBool || this.options.parentObjectArrayBool || (parObj && this.isArrayType(parObj));
+    // Todo: avoid this assumption of (string) concatenation; rely on an add() method
     this.ret = this.beginHandler(obj, parObj, parKey, parObjArrBool);
     this.ret += this.delegateHandlersByType(obj, parObj, parKey, parObjArrBool);
     this.ret += this.endHandler(obj, parObj, parKey, parObjArrBool);
