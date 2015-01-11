@@ -348,14 +348,20 @@ function DJ_JS (options) {
     newOpts.mode = 'JavaScript';
     return new DJ(newOpts);
 }
+DJ.DJ_JS = DJ_JS;
 
 // EXPORTS
-var exp = (define !== undef && define.amd ? {} : exports !== undef ? exports : window);
-exp.DJ = DJ;
-exp.DJ_JS = DJ_JS;
 
-if (define !== undef && define.amd) {
-    define(exp);
+if (module) {
+    module.exports = DJ;
+}
+else if (define !== undef && define.amd) {
+    define(function () {
+        return DJ;
+    });
+}
+else {
+    window.DJ = DJ;
 }
 
 }());

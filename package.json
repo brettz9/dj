@@ -12,6 +12,9 @@
         "type": "git",
         "url": "https://github.com/brettz9/dj.git"
     },
+    "devDependencies": {
+        "nodeunit": "*"
+    },
     "keywords": [
         "json",
         "clarinet",
