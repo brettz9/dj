@@ -88,5 +88,5 @@ providing a Clarinet adapter
 
 # Related ideas/todos
 
-1. Add getXPath() for DOM node prototype
+1. Add getXPath() for DOM node prototype (modify [this](https://developer.mozilla.org/en-US/docs/Using_XPath#getXPathForElement) and avoid 2nd argument via `ownerDocument`)
 1. Report current XPaths to SAX?
