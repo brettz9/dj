@@ -68,22 +68,22 @@ providing a Clarinet adapter
 
 1. Complete existing code!
     1. Ensure works with Node
-    1. Avoid assumption of string concatenation
+1. Provide demo which overrides add() to do its own non-string concatenation work
 1. Pull as well as automatic cycling
 1. Adapt (as with SAX) to allow DOM TreeWalker-style traversal along with XSL-style iteration
 1. JSONPath
     1. Allow JSONPath on supplied data object
     1. Reimplement as JSONPath dependency (calling it by default with `$` and `$..*`)?
         1. Provide JSONPaths to methods?
-1. Support replacer and space arguments in our stringifier and remove JSON.stringify dependency for strings
 1. TreeWalker/NodeIterator equivalents?
 1. Add array-extra methods along with functional join?
 1. Infinity, NaN, String, Number, Date, etc.
 1. Add depth level property (which could be used, e.g., by a JSON.stringify implementation)
-    a) Implement JSON.stringify (without calling JSON.stringify!); if not, fix SampleImplementations above
-        i) Finish array/object (call delegateHandlersByType inside keyValueHandler or in object/arrayHandler?;
+    1. Implement self-sufficient JSON.stringify
+        1. Finish array/object (call delegateHandlersByType inside keyValueHandler or in object/arrayHandler?;
             change keyValueHandlers to return commas, etc.)
-        ii) avoid functions/undefined/prototype completely, and converting nonfinite to null
+        1. Avoid functions/undefined/prototype completely, and converting nonfinite to null
+        1. Support replacer and space arguments in our stringifier and remove JSON.stringify dependency for strings
 1. Add valueHandler option for generically handling values (as in Clarinet)
 
 # Related ideas/todos
