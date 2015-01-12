@@ -6,54 +6,6 @@
 *  DJ, as with SAX, could be adapted to allow DOM TreeWalker-style parsing (pull or automatic cycling: todo) along with
 *  XSL-style iteration (though optional whether to ultimately replace original content), e.g., for use with Jamilih or JsonML style (see JTLT project)
 *  templates (or enhanced via full JS with event handlers)
-* @SampleUseCases
-1) Converting JavaScript structures to JSON
-2) Implementing a SAX-like parser over XML-as-JSON solutions like Jamilih or JsonML
-3) XSL-like transformations of JSON (or XML-as-JSON), e.g., to JHTML
-* @SampleImplementations
-1. Conversion of JSON to JHTML
-2. JSON.stringify() (Todo: support replacer and space arguments)
-* @DesignGoals
-1. Accurate, easy to use, small, fast, memory-efficient, universal in coverage, clean code
-2. Convenient (e.g., with overridable methods) but not auto-creating likely useful polyfills like 
-    Object.keys(), Object.getOwnPropertyNames(), JSON, etc. Might reconsider
-    optionally auto-exporting them, or adding as handler arguments, in the future, but not planning for now.
-3. Context-aware (handlers to include parent objects as well as values or JSONPaths)
-4. Customizable: Ability to override/customize any functionality and allow custom types but without need for reimplementing iteration routines
-5. Offer optional support of regular JavaScript objects (including those potentially representing XML/HTML with events)
-6. Allow pull or auto-push reporting
-7. Configuration vis-a-vis Clarinet/sax-js options:
-    a) Decided for now against trim/normalize options as in Clarinet as seemed not very useful, though could be 
-        allowed easily in stringHandler
-    b) lowercase and xmlns seem too XML-specific
-    c) position has analogue in JSONPath goal
-8. Decided against causing conversion to string and feeding into Clarinet (or `JSON.parse(obj, reviver);`) as use cases
-    of beginning with JSON rather than merely converting to it were too great (toward JS as main environment or even content-type).
-9. Decided against Clarinet handler names as considered ugly relative to CamelCase (despite JS-event-style-familiarity) though
-I may provide adapters later (todo)
-10. Decided against passing Object.keys (or other exports of Object properties like getOwnPropertyNames)
-    to beginObjectHandler/beginArrayHandler (and corresponding end methods) as auto-iteration of 
-    keys/values ought to address most use cases for obtaining all keys and user can do it themselves 
-    if needed. We did pass length of array to begin and endArrayHandler, however.
-11. Have module support standard export formats
-12. Demonstrate functionality by implementing JSON.stringify though provide empty version
-*
-* @PossibleFutureTodos
-1. Add references to jml() in docs along with JsonML references
-2. Integrate with allowing stream input as in Clarinet?
-3. TreeWalker/NodeIterator equivalents? 
-4. Add array-extra methods along with functional join?
-*
-* @Todos
-*
-1. Infinity, NaN, String, Number, Date, etc.
-2. Add depth level property (which could be used, e.g., by a JSON.stringify implementation)
-    a) Implement JSON.stringify (without calling JSON.stringify!); if not, fix SampleImplementations above
-        i) Finish array/object (call delegateHandlersByType inside keyValueHandler or in object/arrayHandler?; 
-            change keyValueHandlers to return commas, etc.)
-        ii) avoid functions/undefined/prototype completely, and converting nonfinite to null
-3. Add JSONPaths (or implement JSONPath reporting in DJ as in jsonPath())? XPath to string SAX XML? .getXPath on DOM node prototype?
-4. Add valueHandler option for generically handling values (as in Clarinet)
 */
 
 var define, exports, module;
