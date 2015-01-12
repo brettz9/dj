@@ -47,7 +47,7 @@ I may provide adapters later (todo)
 * @Todos
 *
 1. Infinity, NaN, String, Number, Date, etc.
-2. Add depth level @property (which could be used, e.g., by a JSON.stringify implementation)
+2. Add depth level property (which could be used, e.g., by a JSON.stringify implementation)
     a) Implement JSON.stringify (without calling JSON.stringify!); if not, fix SampleImplementations above
         i) Finish array/object (call delegateHandlersByType inside keyValueHandler or in object/arrayHandler?; 
             change keyValueHandlers to return commas, etc.)

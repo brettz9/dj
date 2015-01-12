@@ -26,4 +26,4 @@ Unlike musicians who use [oboes](http://oboejs.com/) or [clarinets](https://gith
 
 1. Complete existing code!
     1. Ensure works with Node
-1. Allow JSONPath?
+1. Allow JSONPath or even reimplement as JSONPath dependency (calling it by default with $ and $..*)?
