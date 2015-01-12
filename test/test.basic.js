@@ -4,7 +4,7 @@
 
 var dj = require('../lib/DJ'),
     testCase = require('nodeunit').testCase,
-    clarinetAdapter = require('../lib/DJ.clarinet');
+    ClarinetAdapter = require('../lib/DJ.clarinet');
 
 var json = {
     "store": {
@@ -68,7 +68,7 @@ module.exports = testCase({
         parser.write('{"foo": "bar"}').close();
         
         var expected;
-        var djParser = clarinetAdapter.DJClarinet;
+        var djParser = new ClarinetAdapter();
         
         addMethods(djParser);
         
