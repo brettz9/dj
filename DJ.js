@@ -1,12 +1,4 @@
 /*jslint todo:true*/
-/**
-* DJ Descend-through JSON/JavaScript objects
-* This is not intended as a streaming string parser, though walkJSONString() is provided for whole strings; 
-*  Clarinet (https://github.com/dscape/clarinet ) is more likely the better choice for such cases.
-*  DJ, as with SAX, could be adapted to allow DOM TreeWalker-style parsing (pull or automatic cycling: todo) along with
-*  XSL-style iteration (though optional whether to ultimately replace original content), e.g., for use with Jamilih or JsonML style (see JTLT project)
-*  templates (or enhanced via full JS with event handlers)
-*/
 
 var define, exports, module;
 (function (undef) {'use strict';
