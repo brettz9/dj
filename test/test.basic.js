@@ -2,7 +2,7 @@
 /*jslint vars:true*/
 (function () {'use strict';
 
-var dj = require('../DJ'),
+var dj = require('../lib/DJ'),
     testCase = require('nodeunit').testCase;
 
 var json = {
