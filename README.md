@@ -85,6 +85,7 @@ providing a Clarinet adapter
         1. Avoid functions/undefined/prototype completely, and converting nonfinite to null
         1. Support replacer and space arguments in our stringifier and remove JSON.stringify dependency for strings
 1. Add valueHandler option for generically handling values (as in Clarinet)
+1. Allow asynchronous value-adding (e.g., to parse with `setTimeout` to avoid performance problems)
 
 # Related ideas/todos
 
