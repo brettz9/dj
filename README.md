@@ -68,6 +68,7 @@ providing a Clarinet adapter
 
 1. Complete existing code!
     1. Ensure works with Node
+1. Create JSON serialization; utilize JSON Namespaces (like [these](https://tools.ietf.org/html/draft-saintandre-json-namespaces-00))?
 1. Provide demo which overrides add() to do its own non-string concatenation work
 1. Pull as well as automatic cycling
 1. Adapt (as with SAX) to allow DOM TreeWalker-style traversal along with XSL-style iteration
