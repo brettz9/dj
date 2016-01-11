@@ -4,13 +4,19 @@
     "author": {
         "name": "Brett Zamir",
         "email": "brettz9@yahoo.com",
-        "url": "brett-zamir.me"
+        "url": "http://brett-zamir.me"
     },
+    "contributors": [],
+    "homepage": "https://github.com/brettz9/dj",
     "description": "Descend-through JavaScript or JSON objects in a declarative manner (and optionally compatible with the Clarinet API, though potentially more granular, e.g., with distinct handlers for different scalar value types, and possessing methods available by default in a more readable CamelCase form).",
     "main": "lib/DJ",
     "repository": {
         "type": "git",
         "url": "https://github.com/brettz9/dj.git"
+    },
+    "dependencies": {},
+    "engines": {
+        "node": ">= 4.0"
     },
     "devDependencies": {
         "nodeunit": "*",
