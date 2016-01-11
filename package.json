@@ -10,6 +10,9 @@
     "homepage": "https://github.com/brettz9/dj",
     "description": "Descend-through JavaScript or JSON objects in a declarative manner (and optionally compatible with the Clarinet API, though potentially more granular, e.g., with distinct handlers for different scalar value types, and possessing methods available by default in a more readable CamelCase form).",
     "main": "lib/DJ",
+    "scripts": {
+        "test": "node ./node_modules/nodeunit/bin/nodeunit test"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/brettz9/dj.git"
