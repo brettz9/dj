@@ -46,7 +46,20 @@ var DJ = require('dj-json');
 Browser:
 
 ```html
-<script src="dj/index.js"></script>
+<script src="dj/lib/DJ.js"></script>
+```
+
+If you wish to utilize `ObjectArrayDelegator`, `Stringifier`, and/or
+`DJClarinet`, you will need to load the following as well:
+
+```html
+<script src="dj/lib/DJ.ObjectArrayDelegator.js"></script>
+<script src="dj/lib/DJ.Stringifier.js"></script>
+<script src="dj/lib/DJ.DJClarinet.js"></script>
+```
+
+```js
+// Use the DJ global
 ```
 
 ## Project name
