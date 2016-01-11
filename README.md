@@ -22,7 +22,7 @@ likely the better choice for such cases.
 
 3.  XSL-like transformations of JSON (or XML-as-JSON), e.g., to [JHTML](https://github.com/brettz9/jhtml)
 
-4.  Alternative JSON.stringify() implementations
+4.  Alternative `JSON.stringify()` implementations
 
 5.  Template transformations (with the option of whether to ultimately
     replace original content), e.g., whether with output in Jamilih or
@@ -127,7 +127,8 @@ data source.
 4.  Pull as well as automatic cycling
 
 5.  Adapt (as with SAX) to allow DOM `TreeWalker`-style traversal
-    along with XSL-style iteration
+    along with XSL-style iteration (optional as to whether to
+    replace the original content; see [JTLT](https://github.com/brettz9/jtlt/))
 
 6.  `JSONPath`
 
@@ -163,6 +164,8 @@ data source.
 
 12. Allow asynchronous value-adding (e.g., to parse with `setTimeout` to
     avoid performance problems)
+
+13. Integrate with allowing stream input as in Clarinet?
 
 ## Related ideas/todos
 
