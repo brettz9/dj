@@ -1,16 +1,11 @@
 var DJ, Stringifier, exports;
 
-if (exports) {
-    Stringifier = require('./DJ.Stringifier');
-}
-
 var djTests = {
     'basic test': function (test) {
         test.expect(1);
 
-
-        var sf = Stringifier();
-        var sfJS = Stringifier({mode: 'JavaScript'});
+        var sf = DJ.Stringifier();
+        var sfJS = DJ.Stringifier({mode: 'JavaScript'});
 
         console.log(sf.walkJSONObject(null));
         console.log(sf.walkJSONObject(true));
