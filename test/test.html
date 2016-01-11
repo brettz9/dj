@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>dj Test Suite</title>
+
+    <!-- DJ files -->
+    <script src="../lib/DJ.js"></script><!--Dependency of Stringifier and ObjectArrayDelegator-->
+    <script src="../lib/DJ.ObjectArrayDelegator.js"></script><!--Dependency of Stringifier-->
+    <script src="../lib/DJ.Stringifier.js"></script>
+
+    <!-- Testing dependencies -->
+    <link rel="stylesheet" href="../node_modules/nodeunit/share/nodeunit.css" type="text/css" />
+    <script src="../node_modules/nodeunit/examples/browser/nodeunit.js"></script>
+    <script src="djTests.js"></script>
+  </head>
+  <body>
+    <h1 id="nodeunit-header">dj Test Suite</h1>
+    <script>
+      nodeunit.run({
+        'Suite One': djTests
+      });
+    </script>
+  </body>
+</html>
