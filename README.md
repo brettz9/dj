@@ -126,14 +126,14 @@ data source.
 
 4.  Pull as well as automatic cycling
 
-5.  Adapt (as with SAX) to allow DOM TreeWalker-style traversal
+5.  Adapt (as with SAX) to allow DOM `TreeWalker`-style traversal
     along with XSL-style iteration
 
-6.  JSONPath
+6.  `JSONPath`
 
-    1.  Allow JSONPath on supplied data object
+    1.  Allow `JSONPath` on supplied data object
 
-    2.  Reimplement as JSONPath dependency (calling it by default
+    2.  Reimplement as `JSONPath` dependency (calling it by default
         with `$` and `$..*`)?
 
         1.  Provide JSONPaths to methods?
@@ -142,7 +142,7 @@ data source.
 
 8.  Add array-extra methods along with functional join?
 
-9.  Infinity, NaN, String, Number, Date, etc.
+9.  `Infinity`, `NaN`, `String`, `Number`, `Date`, etc.
 
 10. Add depth level property (which could be used, e.g., by a
     `JSON.stringify` implementation)
@@ -169,6 +169,6 @@ data source.
 1.  Add getXPath() for DOM node prototype (modify [this](https://developer.mozilla.org/en-US/docs/Using_XPath#getXPathForElement)
     and avoid 2nd argument via `ownerDocument`)
 
-2.  Report current XPaths to SAX and follow SAX API for objects (slightly
+2.  Report current XPaths to `SAX` and follow `SAX` API for objects (slightly
     more linear than climbing through children manually) (then utilize
-    in from-DOM conversion like JHTML/Jamilih)?
+    in from-DOM conversion like `JHTML`/`Jamilih`)?
