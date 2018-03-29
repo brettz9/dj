@@ -190,3 +190,5 @@ data source.
     in from-DOM conversion like `JHTML`/`Jamilih`)?
     
 3. See <https://github.com/brettz9/node-object-iterator>
+
+4. Iterating DOM: <https://github.com/brettz9/jWalker>
