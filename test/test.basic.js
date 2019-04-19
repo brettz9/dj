@@ -24,14 +24,14 @@ var json = {
 };
 
 module.exports = testCase({
-    'simple': function (test) {
+    simple (test) {
         test.expect(1);
         var expected;
         var result = dj();
         test.deepEqual(expected, result);
         test.done();
     },
-    'clarinet': function (test) {
+    clarinet (test) {
         test.expect(1);
 
         var clarinet = require('clarinet');
@@ -64,16 +64,16 @@ module.exports = testCase({
             };
         }
         addMethods(parser);
-        
+
         parser.write('{"foo": "bar"}').close();
-        
+
         var expected;
         var djParser = new ClarinetAdapter();
-        
+
         addMethods(djParser);
-        
+
         djParser.write('{"foo": "bar"}').close();
-        
+
         var result;
         test.deepEqual(expected, result);
         test.done();

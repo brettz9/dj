@@ -1,6 +1,6 @@
 function write (txt) {'use strict';
-    document.body.appendChild(document.createTextNode(txt));
-    document.body.appendChild(document.createElement('br'));
+    document.body.append(txt);
+    document.body.append(document.createElement('br'));
 }
 function validate (txt) {'use strict';
     try {
