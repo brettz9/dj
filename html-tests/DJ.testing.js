@@ -5,8 +5,7 @@ export function write (txt) {
 export function validate (txt) {
     try {
         JSON.parse(txt);
-    }
-    catch(e) {
+    } catch(e) {
         write('error validating JSON:' + e);
         return;
     }

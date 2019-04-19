@@ -3,17 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <title>DJ test</title>
-    <script src="../lib/DJ.js"></script>
-    <script src="../lib/DJ.ObjectArrayDelegator.js"></script>
-    <script src="../lib/DJ.Stringifier.js"></script>
-    <script src="DJ.testing.js"></script>
 </head>
 <body>
 <script type="module">
 
+// import ObjectArrayDelegator from '../lib/DJObjectArrayDelegator.js';
+import DJStringifier from '../lib/DJStringifier.js';
+import {write, validateAndWrite} from './DJ.testing.js';
 
-const sf = Stringifier(),
-    sfJS = Stringifier({mode: 'JavaScript'});
+const sf = DJStringifier(),
+    sfJS = DJStringifier({mode: 'JavaScript'});
 
 validateAndWrite(sf.walkJSONObject(null));
 validateAndWrite(sf.walkJSONObject(true));
@@ -36,7 +35,7 @@ validateAndWrite(
     sfJS.walkJSONObject({
       a: null, b: true, c: 3,
       d: ['childItem', 'childWith"Dbl"Quotes'],
-      e: {nested: true}, f: Infinity, g: undefined, h: function () {}
+      e: {nested: true}, f: Infinity, g: undefined, h () {}
     })
 );
 

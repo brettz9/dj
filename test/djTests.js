@@ -30,7 +30,7 @@ const djTests = {
       sfJS.walkJSONObject({
         a: null, b: true, c: 3,
         d: ['childItem', 'childWith"Dbl"Quotes'],
-        e: {nested: true}, f: Infinity, g: undefined, h: function () {}
+        e: {nested: true}, f: Infinity, g: undefined, h () {}
       })
     );
 
