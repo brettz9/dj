@@ -188,7 +188,7 @@ data source.
 2.  Report current XPaths to `SAX` and follow `SAX` API for objects (slightly
     more linear than climbing through children manually) (then utilize
     in from-DOM conversion like `JHTML`/`Jamilih`)?
-    
+
 3. See <https://github.com/brettz9/node-object-iterator>
 
 4. Iterating DOM: <https://github.com/brettz9/jWalker>

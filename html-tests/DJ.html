@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
     <meta charset="utf-8" />
     <title>DJ test</title>
@@ -9,8 +9,10 @@
     <script src="DJ.testing.js"></script>
 </head>
 <body>
-<script>
-var sf = Stringifier(),
+<script type="module">
+
+
+const sf = Stringifier(),
     sfJS = Stringifier({mode: 'JavaScript'});
 
 validateAndWrite(sf.walkJSONObject(null));
@@ -20,14 +22,22 @@ validateAndWrite(sf.walkJSONObject('abc'));
 validateAndWrite(sf.walkJSONObject(['childItem', 'childWith"Dbl"Quotes']));
 
 validateAndWrite(
-    sf.walkJSONObject({a: null, b: true, c: 3, d: ['childItem', 'childWith"Dbl"Quotes'], e: {nested: true}, f: Infinity})
+    sf.walkJSONObject({
+      a: null, b: true, c: 3,
+      d: ['childItem', 'childWith"Dbl"Quotes'],
+      e: {nested: true}, f: Infinity
+    })
 );
 
 write('');
 write('Now try validating JavaScript as JSON (should get an error), but we can print it out:');
 
 validateAndWrite(
-    sfJS.walkJSONObject({a: null, b: true, c: 3, d: ['childItem', 'childWith"Dbl"Quotes'], e: {nested: true}, f: Infinity, g: undefined, h: function () {}})
+    sfJS.walkJSONObject({
+      a: null, b: true, c: 3,
+      d: ['childItem', 'childWith"Dbl"Quotes'],
+      e: {nested: true}, f: Infinity, g: undefined, h: function () {}
+    })
 );
 
 </script>
