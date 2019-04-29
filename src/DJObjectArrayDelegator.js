@@ -24,8 +24,7 @@ class ObjectArrayDelegator {
           keyVals.push(this.keyValueHandler(value[key], key, value, parentKey, parentObjectArrayBool, false, i));
           i++;
         }
-      }
-      else {
+      } else {
         for (key in value) {
           if (value.hasOwnProperty(key)) {
             this.currentKey = key;

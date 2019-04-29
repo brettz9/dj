@@ -40,7 +40,7 @@ npm install dj-json
 Node:
 
 ```js
-var DJ = require('dj-json');
+const DJ = require('dj-json');
 ```
 
 Browser:

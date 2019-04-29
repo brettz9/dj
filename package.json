@@ -11,19 +11,41 @@
   "description": "Descend-through JavaScript or JSON objects in a declarative manner (and optionally compatible with the Clarinet API, though potentially more granular, e.g., with distinct handlers for different scalar value types, and possessing methods available by default in a more readable CamelCase form).",
   "main": "lib/DJ",
   "scripts": {
+    "eslint": "eslint .",
+    "rollup": "rollup -c",
     "test": "node ./node_modules/nodeunit/bin/nodeunit test"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/brettz9/dj.git"
   },
-  "dependencies": {},
   "engines": {
     "node": ">= 4.0"
   },
+  "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@mysticatea/eslint-plugin": "^10.0.2",
+    "clarinet": "0.10.x",
+    "eslint": "^5.16.0",
+    "eslint-config-ash-nazg": "^3.0.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-compat": "^3.1.1",
+    "eslint-plugin-eslint-comments": "^3.1.1",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsdoc": "^4.8.3",
+    "eslint-plugin-markdown": "^1.0.0",
+    "eslint-plugin-no-use-extend-native": "^0.4.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-unicorn": "^8.0.2",
     "nodeunit": "*",
-    "clarinet": "0.10.x"
+    "rollup": "^1.10.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-terser": "^4.0.4",
+    "typescript": "^3.4.5"
   },
   "keywords": [
     "json",
