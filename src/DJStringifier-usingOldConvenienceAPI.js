@@ -72,5 +72,3 @@ class Stringifier {
 }
 
 DJ.exportClass(Stringifier, 'Stringifier', module);
-
-}());
