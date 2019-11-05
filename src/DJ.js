@@ -166,30 +166,30 @@ class DJ {
     var type = typeof obj,
       JSMode = this.mode === 'JavaScript';
     switch (type) {
-      // JavaScript-only
-      case 'number':
-        if (!isFinite(obj)) {
-          if (JSMode) {
-            return 'nonfiniteNumber';
-          // Can return a custom type and add that handler to the object to convert to JSON
-          }
-          return this.typeErrorHandler('nonfiniteNumber', obj, parentObject, parentKey, parentObjectArrayBool);
+    // JavaScript-only
+    case 'number':
+      if (!isFinite(obj)) {
+        if (JSMode) {
+          return 'nonfiniteNumber';
+        // Can return a custom type and add that handler to the object to convert to JSON
         }
-        return type;
-      case 'function': case 'undefined':
-        if (!JSMode) {
-          // Can return a custom type and add that handler to the object to convert to JSON
-          return this.typeErrorHandler(type, obj, parentObject, parentKey, parentObjectArrayBool);
-        }
-      case 'boolean': case 'string':
-        return type;
-      case 'object':
-        return obj ?
-          (this.isArrayType(obj) ?
-            'array' :
-            (JSMode ? this.detectObjectType(obj) : 'object')
-          ) :
-          'null';
+        return this.typeErrorHandler('nonfiniteNumber', obj, parentObject, parentKey, parentObjectArrayBool);
+      }
+      return type;
+    case 'function': case 'undefined':
+      if (!JSMode) {
+        // Can return a custom type and add that handler to the object to convert to JSON
+        return this.typeErrorHandler(type, obj, parentObject, parentKey, parentObjectArrayBool);
+      }
+    case 'boolean': case 'string':
+      return type;
+    case 'object':
+      return obj ?
+        (this.isArrayType(obj) ?
+          'array' :
+          (JSMode ? this.detectObjectType(obj) : 'object')
+        ) :
+        'null';
     }
   }
 
