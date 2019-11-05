@@ -1,4 +1,4 @@
-import DJ from '../lib/DJ.js';
+import DJ from '../src/DJ.js';
 
 const djTests = {
   'basic test' (test) {
@@ -30,7 +30,7 @@ const djTests = {
       sfJS.walkJSONObject({
         a: null, b: true, c: 3,
         d: ['childItem', 'childWith"Dbl"Quotes'],
-        e: {nested: true}, f: Infinity, g: undefined, h () {}
+        e: {nested: true}, f: Infinity, g: undefined, h () { /* */ }
       })
     );
 

@@ -130,6 +130,8 @@ data source.
 
 1.  Complete existing code!
 
+    1.  Restore tests with mocha (had been using nodeunit)
+
     1.  Ensure works with Node
 
 2.  Create JSON serialization; utilize JSON Namespaces (like [these](https://tools.ietf.org/html/draft-saintandre-json-namespaces-00))?
