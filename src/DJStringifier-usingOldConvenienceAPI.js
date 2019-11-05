@@ -15,16 +15,16 @@ class Stringifier {
   //   reporting of the object as a whole
   beginObjectHandler (value, parentObject, parentKey, parentObjectArrayBool) {
     return '{';
-  };
+  }
   endObjectHandler (value, parentObject, parentKey, parentObjectArrayBool) {
     return '}';
-  };
+  }
   beginArrayHandler (value, parentObject, parentKey, parentObjectArrayBool) {
     return '[';
-  };
+  }
   endArrayHandler (value, parentObject, parentKey, parentObjectArrayBool) {
     return ']';
-  };
+  }
 
   // JSON terminal key handler methods
 
