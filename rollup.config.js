@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import {terser} from 'rollup-plugin-terser';
 
 /**
@@ -27,7 +27,9 @@ function getRollupConfig ({minifying = false, format = 'umd'} = {}) {
       name: 'JTLT'
     },
     plugins: [
-      babel()
+      babel({
+        babelHelpers: 'bundled'
+      })
     ]
   };
   if (minifying) {
